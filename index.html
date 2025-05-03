@@ -12,38 +12,67 @@
       background: #f5f5f5;
       color: #333;
     }
-    header {
-      background: #24292e;
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      background-color: #24292e;
       color: white;
       padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+
+    .sidebar img.profile-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    .sidebar h1 {
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    .sidebar {
-      flex: 1;
-      max-width: 300px;
-      background-color: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .sidebar h2 {
-      font-size: 1.2rem;
-      border-bottom: 1px solid #ddd;
       margin-bottom: 0.5rem;
     }
-    .content {
-      flex: 2;
+
+    .sidebar p {
+      text-align: center;
+      margin: 0.3rem 0;
     }
+
+    .sidebar h2 {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      border-bottom: 1px solid #555;
+      padding-bottom: 0.3rem;
+    }
+
+    .sidebar a {
+      color: #58a6ff;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .content {
+      flex: 1;
+      padding: 2rem;
+    }
+
     section {
       margin-bottom: 2rem;
     }
+
     h2 {
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
     }
+
     .projects a {
       display: block;
       padding: 0.5rem;
@@ -54,56 +83,44 @@
       text-decoration: none;
       color: #0366d6;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       background: #eee;
-      margin-top: 2rem;
-    }
-    .profile-bar {
-      background-color: #24292e;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
     }
 
-    .profile-bar a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      gap: 2rem;
-    }
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 1rem;
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="profile-bar">
-    <img src="C:\Users\natha\OneDrive\Documents\GitHub\github.portfolio\github.portfolio\TOGAEDITED.jpg" alt="Luis Nathan Luna" class="profile-photo" />
-    <h1>Luis Nathan Luna</h1>
-    <p>Student</p> 
-    <p>Aspiring UI/UX Designer and Front-end Developer</p>
-    <p>Servant</p>
-    <h2>Contact</h2>
-    <p><strong>Phone:</strong> 09561335436</p>
-    <p><strong>Email:</strong> nathanluna2.10@gmail.com</p>
-    <h2>Links</h2>
-    <p><strong>GitHub:</strong> <a href="https://github.com/nluna21" target="_blank">github.com/nluna21</a></p>
-  </div>
   <div class="container">
+    <aside class="sidebar">
+      <img src="assets/TOGAEDITED.jpg" alt="Luis Nathan Luna" class="profile-photo" />
+      <h1>Luis Nathan Luna</h1>
+      <p>Student</p> 
+      <p>Aspiring UI/UX Designer and Front-end Developer</p>
+      <p>Servant</p>
+
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong><br> 09561335436</p>
+      <p><strong>Email:</strong><br> nathanluna2.10@gmail.com</p>
+
+      <h2>Links</h2>
+      <p><strong>GitHub:</strong><br>
+        <a href="https://github.com/nluna21" target="_blank">github.com/nluna21</a>
+      </p>
+    </aside>
+
     <main class="content">
       <section>
         <h2>About Me</h2>
