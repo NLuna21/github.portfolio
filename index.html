@@ -21,13 +21,6 @@
     header h1 {
       margin: 0;
     }
-    .container {
-      display: flex;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      gap: 2rem;
-    }
     .sidebar {
       flex: 1;
       max-width: 300px;
@@ -67,12 +60,31 @@
       background: #eee;
       margin-top: 2rem;
     }
+    .profile-bar {
+      background-color: #24292e;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .profile-bar a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 2rem;
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <aside class="sidebar">
+  <div class="profile-bar">
+    
       <h1>Luis Nathan Luna</h1>
       <p>Student </p> 
       <p>Aspiring UI/UX Designer and Front-end Developer </p>
@@ -82,8 +94,8 @@
       <p><strong>Email:</strong> nathanluna2.10@gmail.com</p>
       <h2>Links</h2>
       <p><strong>GitHub:</strong> <a href="https://github.com/nluna21" target="_blank">github.com/nluna21</a></p>
-    </aside>
-
+  </div>
+  <div class="container">
     <main class="content">
       <section>
         <h2>About Me</h2>
